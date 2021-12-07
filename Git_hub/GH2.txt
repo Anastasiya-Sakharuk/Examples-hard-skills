@@ -1,0 +1,71 @@
+GitHub. HW_2
+
+1. На локальном репозитории сделать ветки для:
+- Postman
+- Jmeter
+- CheckLists
+- Bug Reports
+- SQL
+- Charles
+- Mobile testing
+
+>>> git branch Postman
+git branch Jmeter
+git branch CheckLists
+git branch Bug_Reports
+git branch SQL
+git branch Charles
+git branch Mobile_testing
+ 
+2. Запушить все ветки на внешний репозиторий:
+	
+>>> git push -u origin Postman > пароль от ssh ключа > enter
+git push -u origin Jmeter > пароль от ssh ключа > enter
+git push -u origin CheckLists > пароль от ssh ключа > enter
+git push -u origin Bug_Reports > пароль от ssh ключа > enter
+git push -u origin SQL > пароль от ssh ключа > enter
+git push -u origin Charles > пароль от ssh ключа > enter
+git push -u origin Mobile_testing > пароль от ssh ключа > enter
+
+3. В ветке Bug Reports сделать текстовый документ со структурой баг репорта:
+
+>>>  git checkout Bug_Reports
+touch bug_report_structure.txt
+vim bug_report_structure.txt
+git add *
+git commit -m 'first bug_report_structure.txt'
+     
+4. Запушить структуру багрепорта на внешний репозиторий:
+
+>>> git checkout main > git push > пароль от ssh ключа > enter
+
+5. Вмержить ветку Bug Reports в Main:
+
+>>> git merge Bug_Reports
+
+6. Запушить main на внешний репозиторий:
+
+>>>  git push > пароль от ssh ключа > enter
+ 
+7. В ветке CheckLists набросать структуру чек листа:
+
+>>>  git checkout CheckLists
+touch checklist_structure.txt
+vim checklist_structure.txt
+git add *
+git commit -m 'first checklist_structure'
+
+8. Запушить структуру на внешний репозиторий:
+
+>>>  git checkout main > git push > пароль от ssh ключа > enter
+
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main:
+
+>>> на внешнем репозитории 'compare & pull request' > 
+> title 'first checklist_structure' > create pull request > new pull request 
+> {base:main < compare:Checklists} > view pull request 
+> merge pull request> confirm merge
+ 
+10. Синхронизировать Внешнюю и Локальную ветки Main:
+
+>>> git pull > enter > пароль от SSH-key > enter

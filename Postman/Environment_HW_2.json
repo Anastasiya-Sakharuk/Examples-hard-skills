@@ -1,0 +1,24 @@
+{
+	"id": "b8b1a569-1a71-4f0c-9dde-a447adcec7a7",
+	"name": "Group_23",
+	"values": [
+		{
+			"key": "name",
+			"value": "Anastasiya",
+			"enabled": true
+		},
+		{
+			"key": "age",
+			"value": "33",
+			"enabled": true
+		},
+		{
+			"key": "salary",
+			"value": "350",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2021-10-19T05:47:04.079Z",
+	"_postman_exported_using": "Postman/9.1.0"
+}

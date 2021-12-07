@@ -1,0 +1,32 @@
+#!/bin/bash
+#Создание папки tl1
+mkdir /d/courses/homework/homework_done/tl1
+#Зайти в папку
+cd tl1
+#Создать три папки
+mkdir scr1 scr2 scr3
+#Зайти в папку
+cd scr1
+#Создать 5 файлов (3 txt, 2 json)
+touch txt1.txt txt2.txt txt3.txt json1.json json2.json
+#Создать три папки
+mkdir scr1_1 scr1_2 scr1_3
+#Просмотр содержимого папки scr1
+ls -la
+#Перемещение файла txt1.txt в scr1_1
+mv txt1.txt scr1_1/txt1.txt
+#Перемещение файла json1.json в scr1_1
+mv json1.json scr1_1/json1.json
+#Просмотр содержимого папки scr1
+ls -la
+#Вывод первых 5 строк из текстового файла
+head -n 5 /d/courses/homework/homework_done/terminal_linux.txt
+#Вывод последних 5 строк из текстовго файла
+tail -n 5 /d/courses/homework/homework_done/terminal_linux.txt
+#Просмотр содержимого длинного файла
+less /d/courses/homework/homework_done/terminal_linux.txt
+#Вывод времени и даты
+date
+#Отправление http запроса на сервер
+curl http://162.55.220.72:5005/terminal-hw-request
+curl 'http://162.55.220.72:5005/get_method?name=Anastasiya&age=33'

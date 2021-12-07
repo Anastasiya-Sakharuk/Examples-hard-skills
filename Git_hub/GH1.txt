@@ -1,0 +1,119 @@
+GIT Homework 1
+
+1. Создать файл “new.json”: 
+	>>> touch new.json
+2. Добавить файл под гит: 
+	>>> git add new.json
+3. Закоммитить файл: 
+	>>> git commit -m 'add the first new.json'
+4. Отправить файл на внешний GitHub репозиторий: 
+	>>> git push > enter > пароль от SSH-key > enter
+5. Создать файлы new2.json, new2.xml, new2.txt
+	>>> touch new2.json new2.xml new2.txt
+6. Добавить файлы под гит: 
+	>>> git add *
+7. Закоммитить файлы: 
+	>>> git commit -m 'add the first file'
+8. Отправить файлы на внешний GitHub репозиторий: 
+	>>> git push > enter > пароль от SSH-key > enter
+9. Отредактировать содержание файла “new2.txt” - написать 
+информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата):
+	>>> vim new2.txt > 1) name: Sakharuk Anastasiya
+			   2) age: 33
+                           3) pet: hamster
+                           4) salary: 350
+            > esc > :wq
+ 10. Отредактировать содержание файла “new2.json” - написать 
+информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). 
+Всё написать в формате JSON:
+	>>> vim new2.json > 
+		{
+			"name":"Sakharuk Anastasiya",
+        		"age":33,
+        		"pet":"hamster",
+        		"salary":350
+		}
+	    >esc > :wq
+11. Добавить и закоммитить “new2.txt” одной строчкой:
+	>>> git add new2.txt && git commit -m 'add the second new2.txt'
+12. Добавить и закоммитить “new2.json” одной строчкой:
+	>>> git add new2.json && git commit -m 'add the second new2.json'
+13. Отправить изменения на внешний репозиторий: 
+	>>> git push > enter > пароль от SSH-key > enter
+14. Отредактировать содержание файла “new2.xml” - написать 
+информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). 
+Всё написать в формате XML:
+	>>> vim new2.xml > 
+		<?xml version="1.0" encoding="UTF-8" ?>
+		<information>
+        		<name>Sakharuk Anastasiya</name>
+			<age>33</age>
+			<pet>hamster</pet>
+			<salary>350</salary>
+		</information>
+	    > esc > :wq
+15. Добавить и закоммитить “new2.xml” одной строчкой: 
+	>>> git commit -a -m 'add the second new2.xml'
+16. Отправить изменения на внешний репозиторий:
+	>>> git push > enter > пароль от SSH-key > enter
+17. Отправить предыдущее домашнее задание по GitBush Terminal на внешний репозиторий:
+	>>> cp /d/courses/homework/homework_done/terminal_linux.txt /d/courses/Git_Hub/gitssh/homework/Terminal_Linux
+	    git add terminal_linux.txt
+            git commit -m 'add the first file terminal linux'
+            git push > enter > пароль от SSH-key > enter
+18. В веб интерфейсе GitHub создать файл new3.txt:
+	>>> Anastasiya-Sakharuk/homework/Git_homework_1/ 
+	> add file > create new file > name new file: new3.txt > commit new file
+19. Отредактировать в веб интерфейсе содержание файла “new3.txt” - написать 
+информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, 
+любимое время года, страна которую хотели бы посетить):
+	>>> Anastasiya-Sakharuk/homework/Git_homework_1/new3.txt > Edit this file > 
+		1. Любимый фильм - "Куда приводят мечты" Винсент Уорд
+		2. Любимый сериал - "Содержанки" Константин Богомолов
+		3. Любимая еда - Шоколадный фондан
+		4. Любимое время года - Весна
+		5. Страна, которую хотела бы посетить - Греция
+20. Сделать Commit changes (сохранить) изменения на веб интерфейсе:
+	>>> 'add the second new3.txt' commit changes
+21. Синхронизировать внешний и локальный репозитории 
+(слить изменения с внешнего репозитория):
+	>>>git pull > enter > пароль от SSH-key > enter
+22. Отредактировать в веб интерфейсе содержание файла “new2.json” - добавить 
+информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, 
+любимое время года, страна которую хотели бы посетить). Всё в формате JSON:
+	>>> Anastasiya-Sakharuk/homework/Git_homework_1/new2.json > Edit this file >
+		{
+			"name":"Sakharuk Anastasiya",
+        		"age":33,
+        		"pet":"hamster",
+        		"salary":350,
+			"film":"What Dreams May Come",
+			"series":"Soderzhanki",
+			"food":"Сhocolate fondant",
+			"season":"Spring",
+			"country":"Greece"
+		}
+23. Сделать Commit changes (сохранить) изменения на веб интерфейсе:
+	>>> 'add the third new2.json' commit changes
+24. Синхронизировать внешний и локальный репозитории:
+	>>> git pull > enter > пароль от SSH-key > enter
+25. Отредактировать в веб интерфейсе содержание файла “new2.xml” - добавить 
+информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, 
+любимое время года, страна которую хотели бы посетить). Всё в формате XML:
+	>>> Anastasiya-Sakharuk/homework/Git_homework_1/new2.xml > Edit this file >
+		<?xml version="1.0" encoding="UTF-8" ?>
+		<information>
+        		<name>Sakharuk Anastasiya</name>
+			<age>33</age>
+			<pet>hamster</pet>
+			<salary>350</salary>
+			<film>What Dreams May Come</film>
+			<series>Soderzhanki</series>
+			<food>Сhocolate fondant</food>
+			<season>Spring</season>
+			<country>Greece</country>
+		</information>
+26. Сделать Commit changes (сохранить) изменения на веб интерфейсе:
+	>>> 'add the third new2.xml' commit changes
+27. Синхронизировать внешний и локальный репозитории 
+	>>> git pull > enter > пароль от SSH-key > enter
