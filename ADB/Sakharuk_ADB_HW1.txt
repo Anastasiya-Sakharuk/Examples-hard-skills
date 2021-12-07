@@ -1,0 +1,37 @@
+ADB HW_1
+
+Сценарий напишите в .txt файл.
+.txt сценарий и .log файл прииложения todolist выгружайте на GitHub.
+
+ 1. Отобразить подключённый девайс в консоли.
+
+PS D:\courses\android\adb\platform-tools_r31.0.3-windows\platform-tools> .\adb devices
+List of devices attached
+7484651 device
+
+ 2. Вывести адрес приложения todolist в системе Android
+
+cd D:/courses/android/001_ToDoList-master/001_ToDoList-master/app/build/outputs/apk/debug
+ 
+ 3. Установить .apk файл приложениия todolist на телефон с компьютера через  ADB
+
+.\adb install D:/courses/android/001_ToDoList-master/001_ToDoList-master/app/build/outputs/apk/debug/Todolist.apk
+>>> разрешить установку на устройстве
+>>> Success
+
+ 4. Сделать скриншот запущенного приложения todolist и сразу скопировать на компьютер в одной команде.
+
+.\adb shell screencap /storage/emulated/0/DCIM/333.png | .\adb pull /storage/emulated/0/DCIM/333.png D:/courses/android/adb/333.png
+ 
+ 5. Вывести в консоль логи приложения todolist
+
+.\adb shell 'logcat | grep -rnw com.android.todolist'
+
+ 6. Скопировать логи приложения todolist на компьютер.
+
+.\adb shell 'logcat | grep -rnw com.android.todolist' > D:/courses/android/adb/log_todolist.log
+
+ 7. Удалить приложение todolist с телефона через ADB
+
+.\adb uninstall com.android.todolist
+>>> Success
