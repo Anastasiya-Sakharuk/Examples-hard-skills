@@ -1,0 +1,104 @@
+HW_2 Terminal_Linux
+
+1. Create the dir_1 folder:
+		>>> mkdir dir_1
+2. Go into the dir_1 folder:
+		>>> cd dir_1
+3. Create the inner_dir_1 folder :
+		>>> mkdir inner_dir_1
+4. View the current directory:
+		>>> pwd
+5. Create an empty text file tf_1.txt from the dir_1 folder:
+		>>> touch tf_1.txt
+6. From the dir_1 folder, create the tf_2.txt text file with 
+the following lines via the cat command:
+- the first 1
+- the second 2
+- the third 3
+		>>> cat > tf_2.txt
+7. Go into the inner_dir_1
+		>>> cd inner_dir_1
+8. Create the tf_3.txt file with any lines via the cat command:
+		>>> cat > tf_3.txt
+9. Add "the second 2" to the tf_3.txt file via the cat command:
+		>>> cat >> tf_3.txt
+10. Add "the sec 2" to the tf_3.txt file via the cat command:
+		>>> cat >> tf_3.txt
+11. Add "the sec 3" to the tf_2.txt file via the cat command:
+		>>> cd../; cat >> tf_2.txt
+12. Add "the SeCoNd 2" to the tf_3.txt file via the cat command:
+		>>> cd inner_dir_1; cat >> tf_3.txt
+13. Add "the seConD 2" to the tf_2.txt file via the cat command:
+		>>> cd../; cat >> tf_2.txt
+14. Create the tf_4.txt file with 15 lines:
+		>>> cd inner_dir_1; cat > tf_4.txt
+15. Create the tF_4.txt file with 13 lines:
+		>>> cat > tF_5.txt
+16. List the contents of the folder:
+		>>> ls -la
+17. Exit from the inner_dir_1 foldere:
+		>>> cd ../
+18. View the contents of the tf_3.txt file to the terminal:
+		>>> cd inner_dir_1; cat tf_3.txt
+19. Find the path to tf_4.txt:
+		>>> find . -name tf_4.txt
+20. Clear the tf_4.txt file from the content without deleting the file itself:
+		>>> cat /dev/null > tf_4.txt
+		>>> echo -n > tf_4.txt
+21. Find the path to files that have a "tf" in the name:
+		>>> find . -name '*tf*'
+22. Find the path to files that have a "tf" in the title and letters 
+in any case:
+		>>> find . -iname '*tf*'
+23. Find lines in files where there is a "sec" combination in 
+the current folder:
+		>>> grep sec *
+24. Find lines in files where there is a combination of 
+the letters "sec" in any case in the current folder:
+		>>> grep -i sec *
+25. Find strings in files where there is only 
+a "sec" combination in the current folder:
+		>>> grep '\<sec\>' *
+26. Find lines in files where there is only 
+a "sec" combination in any case in the current folder:
+		>>> grep '\<[Ss][Ee][Cc]\>' *
+27. Find lines in files where there is a "second" combination 
+in the current folder:
+		>>> grep 'second' *
+28. Find lines in files where there is a combination of 
+the letters "sec" in any case in the current folder:
+		>>> grep -i 'second' *
+29. Find lines in files where there is a "second" combination 
+in all folders below the level:
+		>>> grep -r 'second' *
+30. Find only path and file name in lines that have the "second" 
+combination:
+		>>> grep -l -r 'second' *
+31. Find all lines in all files where there is no "second" combination:
+		>>> grep -v -r 'second' *
+32. Find only name and file path where there is no "second" combination:
+		>>> grep -v -l -r 'second' *
+33. Display the last 4 lines of any text file:
+		>>> tail -n4 Sakharuk_HW_2_Terminal_Linux.txt
+34. Display the first 4 lines of any text file:
+		>>> head -n4 Sakharuk_HW_2_Terminal_Linux.txt
+35. Command in one line. Create a folder and create a text 
+file with the contents:
+		>>> mkdir folder_1 && cd folder_1 && cat > file_1.txt
+36. Command in one line. Move to any single folder text files 
+that have the word "sec" in the content:
+		>>> mv $(grep -l -r 'sec' *) /d/courses/group_28/HW/
+		    Terminal_linux/TL_HW2/folder_1
+37. Command in one line. Copy to any single folder text files 
+that have the word "sec" in the content:
+		>>> cp $(grep -l -r 'sec' *) /d/courses/group_28/HW/
+		    Terminal_linux/TL_HW2/dir_1/inner_dir_1
+38. Command in one line. Find all lines with "sec" in all text files, 
+copy and paste these lines into one newly created text file:
+		>>> grep -r 'sec' * >> /d/courses/group_28/HW/
+		    Terminal_linux/TL_HW2/RRRRRR.txt
+39. Command in one line. Delete text files that have the word 
+"sec" in their content:
+		>>> rm $(grep -l -r 'sec' *)
+40. Simply display the line "Good job!":
+		>>> echo 'Good job!!'
