@@ -1,0 +1,147 @@
+1. To view the current directory:
+
+	>>> pwd
+/d/courses/group_28/HW/Terminal_Linux
+
+2. To create a folder:
+
+	>>> mkdir folder_1
+
+3. To go into the folder:
+
+	>>> cd folder_1
+
+4. To create three folders:
+
+	>>> mkdir f_1 f_2 f_3
+
+5. To go into any folder:
+
+	>>> cd f_1
+
+6. To create five files (3 txt, 2 json):
+
+	>>> touch t_1.txt t_2.txt t_3.txt j_1.json j_2.json
+
+7. To create three folders:
+
+	>>> mkdir f_4 f_5 f_6
+
+8. To list the contents of the folder:
+
+	>>> ls -la
+drwxr-xr-x 1 Professional 197121 0 Apr  9 18:27 ./
+drwxr-xr-x 1 Professional 197121 0 Apr  9 18:20 ../
+drwxr-xr-x 1 Professional 197121 0 Apr  9 18:27 f_4/
+drwxr-xr-x 1 Professional 197121 0 Apr  9 18:27 f_5/
+drwxr-xr-x 1 Professional 197121 0 Apr  9 18:27 f_6/
+-rw-r--r-- 1 Professional 197121 0 Apr  9 18:25 j_1.json
+-rw-r--r-- 1 Professional 197121 0 Apr  9 18:25 j_2.json
+-rw-r--r-- 1 Professional 197121 0 Apr  9 18:25 t_1.txt
+-rw-r--r-- 1 Professional 197121 0 Apr  9 18:25 t_2.txt
+-rw-r--r-- 1 Professional 197121 0 Apr  9 18:25 t_3.txt
+
+9. To open any txt file
+10. To wwrite any text in the open file 
+11. To save the file and to exit the file
+
+	>>> vim t_1.txt > ENTER > i > to write any text > ESC > :wq > ENTER
+
+12. To exit the current folder to a level above:
+
+	>>> cd ..
+
+13. To move any two files which you created to any other folder:
+
+	>>> mv f_1/j_1.json f_2/j_11.json
+	>>> mv f_1/t_1.txt f_2/t_11.txt
+
+14. To copy any two files which you created to any other folder:
+
+	>>> cp f_1/t_2.txt f_2/t_22.txt
+	>>> cp f_1/t_3.txt f_2/t_33.txt
+
+or
+
+	>>> cp f_2/{t_22.txt,t_33.txt} f_1/
+
+15. To find a file by file name:
+
+	>>> find ./ -type f -name '*.txt'
+./f_1/t_2.txt
+./f_1/t_22.txt
+./f_1/t_3.txt
+./f_1/t_33.txt
+./f_2/t_11.txt
+./f_2/t_22.txt
+./f_2/t_33.txt
+
+16. To view file contents in real time (grep command):
+
+	>>> tail -f log_file | grep search_term
+
+17. To display the first few lines of the text file:
+
+	>>> head -v -n 5 Sakharuk_HW_1_Terminal_Linux.txt
+
+1) ==> Sakharuk_HW_1_Terminal_Linux.txt <==
+2) 1. To view the current directory:
+3)
+4) >>> pwd
+5) /d/courses/group_28/HW/Terminal_Linux
+
+18. To display the last few lines of the text file:
+
+	>>> tail -n 5 Sakharuk_HW_1_Terminal_Linux.txt
+
+1) 5) /d/courses/group_28/HW/Terminal_Linux
+2) 
+3) 18. To display the last few lines of the text file:
+4)
+5)        >>>
+
+19. To view the contents of a long file (command less):
+
+	>>> less Sakharuk_HW_1_Terminal_Linux.txt >>> to view >>> q >>> ENTER
+
+20. To display date and time:
+
+	>>> date
+Sat Apr  9 19:26:35     2022
+
+*****
+
+1. To send http request to server http://162.55.220.72:5005/terminal-hw-request
+	>>> curl http://162.55.220.72:5005/terminal-hw-request
+ 
+{"Intro":"Hello!! This is your the first response from server",
+"Tasks":{"Task_1":"Send the next URL in terminal: 
+http://162.55.220.72:5005/get_method?name=(set_your_String)&age=(set_your_number)",
+"result":["Your_String","Your_number"]}}
+
+	>>> curl 'http://162.55.220.72:5005/get_method?name=Anastasiya&age=34'
+
+["Anastasiya","34"]
+
+2. To write a script that will automatically execute items 3, 4, 5, 6, 7, 8, 13
+	>>> ./My_script.txt
+total 4
+drwxr-xr-x 1 Professional 197121 0 Apr  9 19:42 .
+drwxr-xr-x 1 Professional 197121 0 Apr  9 19:42 ..
+-rw-r--r-- 1 Professional 197121 0 Apr  9 19:42 json1.json
+-rw-r--r-- 1 Professional 197121 0 Apr  9 19:42 json2.json
+drwxr-xr-x 1 Professional 197121 0 Apr  9 19:42 scr1_1
+drwxr-xr-x 1 Professional 197121 0 Apr  9 19:42 scr1_2
+drwxr-xr-x 1 Professional 197121 0 Apr  9 19:42 scr1_3
+-rw-r--r-- 1 Professional 197121 0 Apr  9 19:42 txt1.txt
+-rw-r--r-- 1 Professional 197121 0 Apr  9 19:42 txt2.txt
+-rw-r--r-- 1 Professional 197121 0 Apr  9 19:42 txt3.txt
+total 4
+drwxr-xr-x 1 Professional 197121 0 Apr  9 19:42 .
+drwxr-xr-x 1 Professional 197121 0 Apr  9 19:42 ..
+-rw-r--r-- 1 Professional 197121 0 Apr  9 19:42 json2.json
+drwxr-xr-x 1 Professional 197121 0 Apr  9 19:42 scr1_1
+drwxr-xr-x 1 Professional 197121 0 Apr  9 19:42 scr1_2
+drwxr-xr-x 1 Professional 197121 0 Apr  9 19:42 scr1_3
+-rw-r--r-- 1 Professional 197121 0 Apr  9 19:42 txt2.txt
+-rw-r--r-- 1 Professional 197121 0 Apr  9 19:42 txt3.txt
